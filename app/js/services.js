@@ -16,12 +16,6 @@ angular.module('myApp.services', [])
 		  var x = offsetResult.x;
 		  var y = offsetResult.y;	 
 
-		  var EAST = 0;
-		  var NORTH = -1.5707963267948966;
-		  var WEST = 3.141592653589793;
-		  var SOUTH = 1.5707963267948966;
-		  
-		  Math.Pi;
 		  
 		  var angleInRads = Math.atan2(y, x);
 
@@ -30,7 +24,7 @@ angular.module('myApp.services', [])
 			  	  westside:this.opacityByRadians( Math.abs(angleInRads) - Math.PI),
 			  	  southside:this.opacityByRadians( Math.abs(Math.atan2(x, y))),
 			  	  
-			  	  angle:angleInRads
+			  	  angle:angleInRads //for debug
 			  	};
 
 	  }
