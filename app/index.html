@@ -54,7 +54,7 @@
        x="-25"
        y="52.362305" />
     <path
-       style="opacity:0.00100002000000000;fill:#8a8a8a;fill-opacity:1;stroke:none"
+       style="opacity:{{eastside}};fill:#8a8a8a;fill-opacity:1;stroke:none"
        d="m 575,452.3623 0,200 -100,-100 z"
        id="eastside"
        inkscape:connector-curvature="0"
@@ -65,11 +65,11 @@
        inkscape:connector-curvature="0"
        id="westside"
        d="m 375,452.3623 0,200 100,-100 z"
-       style="opacity:0.8;fill:#8a8a8a;fill-opacity:1;stroke:none" />
+       style="opacity:{{westside}};fill:#8a8a8a;fill-opacity:1;stroke:none" />
     <path
-       style="opacity:0.9;fill:#8a8a8a;fill-opacity:1;stroke:none"
+       style="opacity:{{southside}};fill:#8a8a8a;fill-opacity:1;stroke:none"
        d="m 375,652.3623 200,0 -100,-100 z"
-       id="path4001"
+       id="southside"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
@@ -77,10 +77,16 @@
        inkscape:connector-curvature="0"
        id="northside"
        d="m 375,452.3623 200,0 -100,100 z"
-       style="opacity:0.5;fill:#8a8a8a;fill-opacity:1;stroke:none" />
+       style="opacity:{{northside}};fill:#8a8a8a;fill-opacity:1;stroke:none" />
   </g>
 </svg>	
-	<p>Coordinates : {{xPos}}, {{yPos}}</p>
+	<p style="position:fixed;top:20px;left:20px">Coordinates : {{xPos}}, {{yPos}} <br>
+	eastside : {{eastside}} <br>
+	northside : {{northside}} <br>
+	westside : {{westside}} <br>
+	southside : {{southside}} <br>
+	angle: {{angle}} <br>
+	</p>
 	<other-directive></other-directive>
 	
 	
