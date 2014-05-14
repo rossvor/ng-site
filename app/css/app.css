@@ -38,16 +38,16 @@
 	top: 400px;
 	
 	-webkit-animation-name: fadein;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 0.6s;
 	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-delay: 0.0s;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-direction:alternate;
 	-webkit-animation-play-state: running;
-	-webkit-animation-fill-mode:forwards
+	-webkit-animation-fill-mode:forwards;
 	
 	animation-name: fadein;
-	animation-duration: 1s;
+	animation-duration: 0.6s;
 	animation-timing-function: ease-in;
 	animation-delay: 0.0s;
 	animation-iteration-count: 1;
@@ -62,6 +62,7 @@ body {
 }
 
 .triangle {
+/* 	cursor: crosshair; */
 	margin-left: 10%;
 	margin-top: 0;
 }
