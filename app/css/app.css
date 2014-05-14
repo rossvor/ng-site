@@ -28,3 +28,54 @@
   content: "";
   padding: 0;
 }
+
+.ctext {
+	font-family: 'Fredoka One', cursive;
+	font-size: 2em;
+	color: rgba(83, 102, 101, 1.0);
+	position: absolute;
+	left: 50%;
+	top: 400px;
+	
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-delay: 0.0s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode:forwards
+	
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-delay: 0.0s;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-fill-mode:forwards
+
+}
+
+body {
+	background-color:#82d9d7;
+	
+}
+
+.triangle {
+	margin-left: 10%;
+	margin-top: 0;
+}
+
+
+@-webkit-keyframes fadein
+{
+	from   {color: rgba(83, 102, 101, 0.1); left: 70%;}
+	to {color: rgba(83, 102, 101, 1.0); left: 50%;}
+}
+
+
+@keyframes fadein
+{
+	from   {color: rgba(83, 102, 101, 0.1); left: 70%;}
+	to {color: rgba(83, 102, 101, 1.0); left: 50%;}
+}

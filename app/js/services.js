@@ -138,4 +138,30 @@ angular.module('myApp.services', [])
 	}
 	  
 	  
-  });
+  })
+  
+  .service('elementOffset', function() {
+	  this.offset = function (element) {
+		  
+		  var documentElem;
+		  var box = { top: 0, left: 0 };
+		  var doc = element && element.ownerDocument;
+
+		  if (!doc) {
+			  return;
+		  }
+
+		  documentElem = doc.documentElement;
+
+		  if ( typeof element.getBoundingClientRect !== undefined ) {
+			  box = element.getBoundingClientRect();
+		  }
+
+		  return {
+			  top: box.top + (window.pageYOffset || documentElem.scrollTop) - (documentElem.clientTop || 0),
+			  left: box.left + (window.pageXOffset || documentElem.scrollLeft) - (documentElem.clientLeft || 0)
+		  };
+		  
+	  }
+	
+});
