@@ -80,7 +80,12 @@ angular.module('myApp.controllers', ['myApp.services'])
   .controller('CodeCtrl', ['$scope', function($scope) {
 
   }])
-  .controller('GraphicsCtrl', ['$scope', function($scope) {
+  .controller('GraphicsCtrl', ['$scope','$timeout', function($scope, $timeout) {
+	  
+	  $scope.hideSheet = true;
+	  $timeout(function() {
+		  $scope.hideSheet = false;
+	  },2000);
 
   }])
   
