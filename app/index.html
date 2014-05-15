@@ -16,7 +16,10 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-<p class="ctext">Hi I'm Ross, I code and make graphics.</p>
+<a href="#/code">Code</a>, <a href="#/graphics">Graphics</a>, <a href="#/about">About</a>
+<div class="view-animate" ng-view>
+<p>Hi I'm Ross, I code and make graphics.</p>
+</div>
 <div ng-controller="TriangleConeCtrl" class="triangle">
 <svg
    ng-click="activateSVG()"   
@@ -123,6 +126,7 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>

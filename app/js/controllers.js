@@ -77,7 +77,14 @@ angular.module('myApp.controllers', ['myApp.services'])
 	}
 
   }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
+  .controller('CodeCtrl', ['$scope', function($scope) {
+
+  }])
+  .controller('GraphicsCtrl', ['$scope', function($scope) {
+
+  }])
+  
+  .controller('AboutCtrl', ['$scope', function($scope) {
 
   }]);
  
