@@ -13,7 +13,7 @@ angular.module('myApp.controllers', ['myApp.services'])
 	  var boxOffset = elmOffservice.offset(elm);
 //	  console.log(boxOffset);
 	  
-	  var activated = false;
+	  var activated = true;
 	  
 	  //defaults
 	  $scope.eastside = 0.001;
@@ -84,7 +84,7 @@ angular.module('myApp.controllers', ['myApp.services'])
 
   }])
   
-  .controller('AboutCtrl', ['$scope', function($scope) {
-
+  .controller('NavCtrl', ['$scope', function($scope) {
+	  
   }]);
  
