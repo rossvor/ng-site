@@ -13,6 +13,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/code', {templateUrl: 'partials/code.html', controller: 'CodeCtrl'});
   $routeProvider.when('/graphics', {templateUrl: 'partials/graphics.html', controller: 'GraphicsCtrl'});
-  $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'AboutCtrl'});
+  $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'TriangleConeCtrl'});
   $routeProvider.otherwise({redirectTo: '/about'});
 }]);

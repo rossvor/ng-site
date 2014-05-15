@@ -8,7 +8,7 @@ angular.module('myApp.controllers', ['myApp.services'])
 	  var worksize = {x:1000,y:1000};
 	  var center = {x:worksize.x/2, y:worksize.y/2};
 	  
-	  var elm  = document.querySelector('svg');
+	  var elm  = document.querySelector('#trianglesvg');
 	  
 	  var boxOffset = elmOffservice.offset(elm);
 //	  console.log(boxOffset);

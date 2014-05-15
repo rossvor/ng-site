@@ -34,8 +34,8 @@
 	font-size: 2em;
 	color: rgba(83, 102, 101, 1.0);
 	position: absolute;
-	left: 50%;
-	top: 40%;
+	left: 5%;
+	top: 5%;
 
 }
 
@@ -48,12 +48,10 @@
 
 .view-animate.ng-enter {
   top:-100%;
-  color: rgba(83, 102, 101, 0.0);
   opacity: 0.0;
 }
 .view-animate.ng-enter.ng-enter-active {
-  top:40%;
-  color: rgba(83, 102, 101, 1.0);
+  top:5%;
   opacity: 1.0;
 }
 .view-animate.ng-leave.ng-leave-active {
