@@ -80,7 +80,60 @@ angular.module('myApp.controllers', ['myApp.services'])
   .controller('CodeCtrl', ['$scope', function($scope) {
 
   }])
-  .controller('GraphicsCtrl', ['$scope','$timeout', function($scope, $timeout) {
+  .controller('GraphicsCtrl', ['$scope','$timeout','$interval', function($scope, $timeout, $interval) {
+	  
+	  function animateBall () {
+		var duration = 1000;  
+		var frames = 30;
+		var range = 0.6;
+		
+		var frameChange = range / frames;
+		var timeBetweenFrames = duration / frames;
+		
+		
+		$interval(function() {
+			$scope.bottom1 -= frameChange;
+			$scope.bottom2 -= frameChange;
+			$scope.top1 -= frameChange;
+			$scope.top2 -= frameChange;
+		}, timeBetweenFrames, frames);
+		
+//		function change (frame) {
+//			if (frame < frames){
+//				frame++;
+//				$scope.bottom1 -= frameChange;
+//				$scope.bottom2 -= frameChange;
+//				$scope.top1 -= frameChange;
+//				$scope.top2 -= frameChange;
+//				$timeout( change(frame), timeBetweenFrames);
+//			}
+//		}
+//		change(0);
+		
+//		for (var i=0;i < frames; i++){
+//			$timeout(function() {
+//				$scope.bottom1 -= frameChange;
+//				$scope.bottom2 -= frameChange;
+//				$scope.top1 -= frameChange;
+//				$scope.top2 -= frameChange;
+//			}, 1000 );
+//
+//		}
+
+	  }
+	  
+	  $scope.bottom1 = 0.654;
+	  $scope.bottom2 = 0.656;
+	  $scope.top1 = 0.982;
+	  $scope.top2 = 0.984;
+//	  $scope.bottom1 = 0.054;
+//	  $scope.bottom2 = 0.056;
+//	  $scope.top1 = 0.382;
+//	  $scope.top2 = 0.384;
+	  
+	  $timeout(function() {
+		  animateBall();
+	  }, 2000);
 	  
 	  $scope.hideSheet = true;
 	  $timeout(function() {

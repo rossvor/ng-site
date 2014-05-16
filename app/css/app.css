@@ -137,13 +137,17 @@ nav {
 	width:60%;
 	font-size: 0.8em;
 	color: #8a8a8a;	
-	
 }
 
 .graphics > div > h2 {
 	text-align:center;
 	color:#565656;
 	margin-top: 90px;
+}
+
+.graphics > div > div {
+	width: 60%;
+	margin:auto;
 }
 
 
