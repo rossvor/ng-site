@@ -14,7 +14,7 @@ describe('controllers', function(){
 
   it('should ....', inject(function($controller) {
     //spec body
-    var myCtrl2 = $controller('MyCtrl2', { $scope: {} });
+    var myCtrl2 = $controller('GraphicsCtrl', { $scope: {} });
     expect(myCtrl2).toBeDefined();
   }));
 });
