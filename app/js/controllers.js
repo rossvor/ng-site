@@ -11,7 +11,6 @@ angular.module('myApp.controllers', ['myApp.services'])
 	  var elm  = document.querySelector('#trianglesvg');
 	  
 	  var boxOffset = elmOffservice.offset(elm);
-//	  console.log(boxOffset);
 	  
 	  var activated = true;
 	  
@@ -19,15 +18,15 @@ angular.module('myApp.controllers', ['myApp.services'])
 	  $scope.eastside = 0.001;
 	  $scope.northside = 0.5;
 	  $scope.westside = 0.8;
-	  $scope.southside = 0.9;	  
-	  $scope.a = {x:400, y:400};
-	  $scope.b = {x:400, y:600};
-	  $scope.c = {x:600, y:600};	  
+	  $scope.southside = 0.9;
+	  
 	  $scope.aPoint = "400,400";
 	  $scope.bPoint = "400,600";
-	  $scope.cPoint = "600,600";	  
+	  $scope.cPoint = "600,600";
+	  
 	  $scope.visibility = "visible";
-	  $scope.shadowpoint = {x:"130",y:"850"};
+	  $scope.shadowpoint = {x:"130",y:"850" };
+	  
 	  
 	  $scope.angle = 0;
 	  
@@ -42,20 +41,24 @@ angular.module('myApp.controllers', ['myApp.services'])
 		  
 		if ( activated === false)
 			return;
-		  
-		var x = e.pageX - boxOffset.left;
-		var y = e.pageY - boxOffset.top;
+		
+		var notscaledX = e.pageX - boxOffset.left;
+		var notscaledY = e.pageY - boxOffset.top;
+		
+		var x = notscaledX * 1000 / worksize.x;
+		var y = notscaledY * 1000 / worksize.y;
+		
 		$scope.xPos = x;
 		$scope.yPos = y;
 		
-		var newOpacity =  shaderService.calculateOpacity(x,y, center);
+		var newOpacity =  shaderService.calculateOpacity(x,y, {x:500,y:500});
 		$scope.eastside = newOpacity.eastside;
 		$scope.northside = newOpacity.northside;
 		$scope.westside = newOpacity.westside;
 		$scope.southside = newOpacity.southside;
-		$scope.shadowpoint = shaderService.getShadowPoint(x,y,center.x,center.y);
+		$scope.shadowpoint = shaderService.getShadowPoint(x,y, 500, 500);
 		
-		var path = shaderService.shadowPath({x:x,y:y}, 200, worksize);
+		var path = shaderService.shadowPath({x:x,y:y}, 200, {x:1000,y:1000});
 		$scope.sector = path.sector;
 		
 		if (path.sector != "C") {
@@ -72,7 +75,6 @@ angular.module('myApp.controllers', ['myApp.services'])
 		$scope.angle = newOpacity.angle;
 		$scope.offset = shaderService.offset(x,y,center.x,center.y);
 		
-//		$scope.leftOffset = ;
 		
 	}
 
@@ -97,39 +99,12 @@ angular.module('myApp.controllers', ['myApp.services'])
 			$scope.top1 -= frameChange;
 			$scope.top2 -= frameChange;
 		}, timeBetweenFrames, frames);
-		
-//		function change (frame) {
-//			if (frame < frames){
-//				frame++;
-//				$scope.bottom1 -= frameChange;
-//				$scope.bottom2 -= frameChange;
-//				$scope.top1 -= frameChange;
-//				$scope.top2 -= frameChange;
-//				$timeout( change(frame), timeBetweenFrames);
-//			}
-//		}
-//		change(0);
-		
-//		for (var i=0;i < frames; i++){
-//			$timeout(function() {
-//				$scope.bottom1 -= frameChange;
-//				$scope.bottom2 -= frameChange;
-//				$scope.top1 -= frameChange;
-//				$scope.top2 -= frameChange;
-//			}, 1000 );
-//
-//		}
-
 	  }
 	  
 	  $scope.bottom1 = 0.654;
 	  $scope.bottom2 = 0.656;
 	  $scope.top1 = 0.982;
 	  $scope.top2 = 0.984;
-//	  $scope.bottom1 = 0.054;
-//	  $scope.bottom2 = 0.056;
-//	  $scope.top1 = 0.382;
-//	  $scope.top2 = 0.384;
 	  
 	  $timeout(function() {
 		  animateBall();

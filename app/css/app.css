@@ -96,6 +96,11 @@ body {
   opacity: 0.0;
 }
 
+/* About page */
+
+.about-wrapper {
+	position: relative;
+}
 
 #trianglesvg {
 	position:absolute;
