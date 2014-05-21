@@ -102,19 +102,36 @@ body {
 	position: relative;
 }
 
+
 #trianglesvg {
 	position:absolute;
-	top:5%;
-	left:5%;
 }
 
 .abouttext {
 	position:absolute;
-	top: 40%;
+	top: 400px;
 	left: 50%;
 	width: 500px;
 
 }
+
+@media screen and (max-width: 1200px) {
+	.abouttext {
+		font-size: 0.9em;
+		left: 30%;
+		top: 200px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.abouttext {
+		font-size: 0.7em;
+		left: 10%;
+		top: 400px;
+	}
+}
+
+
 
 
 nav {

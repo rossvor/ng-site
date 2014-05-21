@@ -3,10 +3,37 @@
 /* Controllers */
 
 angular.module('myApp.controllers', ['myApp.services'])
-  .controller('TriangleConeCtrl', ['$scope', 'sidesShader', 'elementOffset', function($scope, shaderService, elmOffservice) {
+  .controller('TriangleConeCtrl', ['$scope', 'sidesShader', 'elementOffset', '$window', function($scope, shaderService, elmOffservice, $window) {
 	  
-	  var worksize = {x:1000,y:1000};
-	  var center = {x:worksize.x/2, y:worksize.y/2};
+	  var screenWidth = $window.innerWidth;
+	  var worksize;
+	  
+	  $window.onresize = function(){
+		  $scope.$apply(function() {
+//			  console.log("I'm called ");
+			  screenWidth = $window.innerWidth;
+			  if (screenWidth > 860) {
+				  worksize = {x:1000,y:1000};
+				  $scope.svgSize = 1000;
+			  }
+			  else {
+				  worksize = {x:600,y:600};
+				  $scope.svgSize = 600;
+			  }
+		  });
+	  }
+
+
+	  if (screenWidth > 860) {
+		  worksize = {x:1000,y:1000};
+		  $scope.svgSize = 1000;
+	  }
+	  else {
+		  worksize = {x:600,y:600};
+		  $scope.svgSize = 600;
+	  }
+	  
+//	  var center = {x:worksize.x/2, y:worksize.y/2};
 	  
 	  var elm  = document.querySelector('#trianglesvg');
 	  
@@ -72,8 +99,8 @@ angular.module('myApp.controllers', ['myApp.services'])
 		}
 		
 		//debug
-		$scope.angle = newOpacity.angle;
-		$scope.offset = shaderService.offset(x,y,center.x,center.y);
+//		$scope.angle = newOpacity.angle;
+//		$scope.offset = shaderService.offset(x,y,center.x,center.y);
 		
 		
 	}
