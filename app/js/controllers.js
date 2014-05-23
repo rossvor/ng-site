@@ -144,6 +144,11 @@ angular.module('myApp.controllers', ['myApp.services'])
 
   }])
   
+  .controller('TestCtrl', ['$scope', function($scope) {
+	
+  }])
+  
+    
   .controller('NavCtrl', ['$scope', function($scope) {
 	  
   }]);

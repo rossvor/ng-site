@@ -181,5 +181,52 @@ nav {
 	
 }
 
+/* Modal styles  */
+
+.modal-image {
+/* 		width: 550px; */
+		max-width: 550px;
+	}
+
+@media (min-width: 1200px) {
+	.modal-lg {
+		width: 1000px;
+/* 		max-width: 1100px; */
+	}
+	
+	.modal-image {
+		width: 950px;
+/* 		max-width: 1050px; */
+	}
+
+}
+
+.graphics > .modal-block {
+	margin-top: 145px;
+	width: 40%;
+}
+
+
+.gallery-dir-wrapper {
+	border-left: solid;
+	border-left-width: 20px;
+	border-color: #5f9e9d;
+	float:left;
+	margin: 20px;
+	transition: border-left-width 0.1s ease-in;
+}
+
+.gallery-dir-wrapper:hover {
+	border-left-width: 0px;
+}
+
+.gallery-dir-img {
+	cursor: pointer;
+	border: solid;
+	border-color: white;
+	border-width: 5px;
+}
+
+
 
 
