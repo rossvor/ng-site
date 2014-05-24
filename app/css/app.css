@@ -115,6 +115,16 @@ body {
 
 }
 
+.abouttext > a {
+	color: #536665;
+}
+
+.abouttext > a:hover {
+	color: black;
+	
+}
+
+
 @media screen and (max-width: 1200px) {
 	.abouttext {
 		font-size: 0.9em;
@@ -227,6 +237,37 @@ nav {
 	border-width: 5px;
 }
 
+/* Code section */
+
+.view-animate > header {
+	font-family: 'Galdeano', sans-serif;
+	font-size: 2em;
+	text-align: center;
+/* 	width: 60%; */
+	margin: auto;
+	margin-top: 40px;
+}
+
+.code-sec {
+	margin-top: 80px;
+/* 	background-color: white; */
+	background: url("../img/polka-small.png") 0px 0px / 200px repeat;
+	padding: 80px;
+}
+
+.code-sec > p {
+	font-family: 'Galdeano', sans-serif;
+	color: rgba(83, 102, 101, 1.0);
+	width: 60%;
+	margin: auto;
+}
+
+a {
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+}
 
 
 
