@@ -144,11 +144,6 @@ body {
 
 
 
-nav {
-	position:fixed;
-	left:90%;
-	
-}
 
 #sphere {
 	
@@ -268,6 +263,49 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+/* nav */
+
+
+nav {
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	margin: 20px;
+	position:fixed;
+	right:2%;
+}
+
+nav > a {
+	
+	margin-left: 30px;
+}
+
+.highlighter {
+	width: 70px;
+	height: 25px;
+	background-color: white;
+	position: relative;
+	top: -22px;
+	right: -170px;
+	opacity: 0.4;
+	z-index: -1;
+	transition:0.5s linear all;
+}
+
+
+.highlighterabout {
+	right: -170px;
+}
+
+.highlightergraphics {
+	right: -90px;
+}
+
+.highlightercode {
+	right: -10px;
+}
+
+
 
 
 

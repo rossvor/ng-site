@@ -149,7 +149,27 @@ angular.module('myApp.controllers', ['myApp.services'])
   }])
   
     
-  .controller('NavCtrl', ['$scope', function($scope) {
+  .controller('NavCtrl', ['$scope','$location', '$timeout', function($scope, $location, $timeout) {
 	  
+	  $scope.codeselected = false
+	  $scope.graphicsselected = false;
+	  
+	  $scope.$on("$locationChangeStart", function() { 
+	        switch ($location.path()) {
+			case '/code':
+				$scope.codeselected = true;
+				$scope.graphicsselected = false;
+				break;
+			case '/graphics':
+				$scope.codeselected = false;
+				$scope.graphicsselected = true;
+				break;
+			default:
+				$scope.codeselected = false;
+				$scope.graphicsselected = false;
+				break;
+			}
+	        
+	      });
   }]);
  
