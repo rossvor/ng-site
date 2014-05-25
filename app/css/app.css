@@ -115,13 +115,63 @@ body {
 
 }
 
-.abouttext > a {
+.abouttext > a, .abouttext > span {
 	color: #536665;
 }
 
-.abouttext > a:hover {
+.abouttext > a:hover, .abouttext > span:hover {
 	color: black;
+	cursor: pointer;
+}
+
+
+.contacts {
+/* 	display:none; */
+	position: absolute;
+	top: 440px;
+	left: 50%;
+	background-color: #b4e8e7;
+	border-radius: 5px;
+	width:200px;
+	z-index:100;
+	padding: 4px;
+	font-size: 0.7em;
 	
+}
+
+.contacts > a > i {
+	margin:5px;
+	color: #536665;
+}
+
+.contacts > a > i:hover {
+	color: black;
+}
+
+
+.contacts.ng-hide-add, .contacts.ng-hide-remove {
+  transition:0.3s ease-in all;
+  display:block!important;
+  
+}
+
+.contacts.ng-hide-add.ng-hide-add {
+	opacity:1.0;
+	
+}
+
+.contacts.ng-hide-add.ng-hide-add-active {
+	opacity:0.0;
+}
+
+
+.contacts.ng-hide-remove.ng-hide-remove {
+	opacity:0.0;
+	
+}
+
+.contacts.ng-hide-remove.ng-hide-remove-active {
+	opacity:1.0;
 }
 
 
@@ -131,6 +181,10 @@ body {
 		left: 30%;
 		top: 200px;
 	}
+	.contacts {
+		left: 30%;
+		top: 240px;
+	}
 }
 
 @media screen and (max-width: 860px) {
@@ -138,6 +192,10 @@ body {
 		font-size: 0.7em;
 		left: 10%;
 		top: 400px;
+	}
+	.contacts {
+		left: 10%;
+		top: 440px;
 	}
 }
 

@@ -5,6 +5,13 @@
 angular.module('myApp.controllers', ['myApp.services'])
   .controller('TriangleConeCtrl', ['$scope', 'sidesShader', 'elementOffset', '$window', function($scope, shaderService, elmOffservice, $window) {
 	  
+	  $scope.showContacts = false;
+	  $scope.toggleContacts = function() {
+		  
+		 $scope.showContacts = $scope.showContacts ? false : true;
+		 console.log("$scope.showContacts : " + $scope.showContacts);
+	}
+	  
 	  var screenWidth = $window.innerWidth;
 	  var worksize;
 	  
